@@ -19,3 +19,8 @@ class PostAdmin(admin.ModelAdmin):
             return mark_safe(f'<img src={post.photo.url} style="width: 50px;"/>')
 
         return None
+
+
+@admin.register(models.Comment)
+class CommentAdmin(admin.ModelAdmin):
+    pass
